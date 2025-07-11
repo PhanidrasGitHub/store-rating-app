@@ -1,0 +1,68 @@
+### Signup Request
+POST http://localhost:5000/api/users/signup
+Content-Type: application/json
+
+{
+  "username": "suman",
+  "email": "suman@mail.com",
+  "password": "suman123",
+  "role": "user",
+  "address": "Kakinada"
+}
+
+###
+
+### Login Request
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "Phanindra",
+  "password": "phanindra1103"
+}
+
+### Add Store Request
+POST http://localhost:5000/api/auth/add-store 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzUyMTQ3MTAyLCJleHAiOjE3NTIxNTA3MDJ9.JlvJC6CBDP-qIw1RQiniD0LZEfSGszCgXVnfZ4rBjLc
+
+{
+  "name":"Urban Bakery",
+  "address":"5th Cross Road, Eluru",
+   "owner_id":9
+}
+
+### Get Dashboard Stats Request
+GET http://localhost:5000/api/auth/dashboard-stats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzUyMTQ3MTAyLCJleHAiOjE3NTIxNTA3MDJ9.JlvJC6CBDP-qIw1RQiniD0LZEfSGszCgXVnfZ4rBjLc
+
+### List Users, Admins, and Stores Requests
+GET http://localhost:5000/api/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzUyMTQ3MTAyLCJleHAiOjE3NTIxNTA3MDJ9.JlvJC6CBDP-qIw1RQiniD0LZEfSGszCgXVnfZ4rBjLc
+
+### List Admins Request
+GET http://localhost:5000/api/auth/admins
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzUyMTQ3MTAyLCJleHAiOjE3NTIxNTA3MDJ9.JlvJC6CBDP-qIw1RQiniD0LZEfSGszCgXVnfZ4rBjLc
+### List Stores Request
+GET http://localhost:5000/api/auth/stores?search=eluru
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzUyMTQ3MTAyLCJleHAiOjE3NTIxNTA3MDJ9.JlvJC6CBDP-qIw1RQiniD0LZEfSGszCgXVnfZ4rBjLc
+### Add Rating Request
+POST http://localhost:5000/api/auth/ratings
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzUyMTU1MDYyLCJleHAiOjE3NTIxNTg2NjJ9.nUM2MRGf93hurcSaqFDxuf0SfFcbx0pzc6IoNjOTz-s
+
+{
+  "store_id": 2,
+  "rating": 4,
+  "comment": "Very neat store with good service"
+}
+
+### Get User Ratings Request
+PUT http://localhost:5000/api/auth/ratings/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzUyMTU0NTQ1LCJleHAiOjE3NTIxNTgxNDV9.J6-GOP6xP2NPms5zbRl0nBxL5-MgdZGn4v8Io4fOXG4
+
+{
+  "rating": 5,
+  "comment": "Updated: Excellent experience!"
+}
