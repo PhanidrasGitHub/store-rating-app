@@ -2,7 +2,7 @@ import axios from 'axios';
 //import { useAuth } from './AuthContext';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://store-rating-app-backend-8x4p.onrender.com/api/auth',
+  baseURL: 'https://store-rating-app-5svm.onrender.com/api/auth',
 });
 
 axiosInstance.interceptors.request.use(
